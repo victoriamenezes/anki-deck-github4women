@@ -2,6 +2,10 @@
 
 Deck de cartas Anki para estudos de repetição espaçada, criado para apoiar mulheres e pessoas LGBTQIAP+ na jornada de aprendizado e troca de conhecimento rumo à certificação GitHub Foundations. 
 
+💻 **Website**
+
+[Disponível aqui!](https://victoriamenezes.github.io/anki-deck-github4women/) 
+
 ✨ **Sobre o projeto**
 
 Este deck foi pensado como uma ferramenta comunitária, acessível e contínua. 
@@ -9,7 +13,7 @@ O objetivo é tornar os conceitos fundamentais do GitHub mais próximos e memori
 
 📚 **O que você vai encontrar neste Deck:**
 
-Este deck possui 70 cards que abrangem os principais temas necessários para a certificação GitHub Foundations, incluindo:
+O deck possui 70 cards que abrangem os principais temas necessários para a certificação GitHub Foundations, incluindo:
 
 - Fundamentos do Git e GitHub
 - Fluxos de trabalho colaborativos
