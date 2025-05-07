@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Foundations - GitHub4Women</title>
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color-fixed: #8fb8d0;
+      --text-color-body-fixed: #FFFFFF;
+      --text-color-title-fixed: #ffffffd1;
+      --text-color-footer-fixed: #F0F0F0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--bg-color-fixed);
+      color: var(--text-color-body-fixed);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      /* Transições de cor removidas */
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: var(--text-color-title-fixed);
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .description {
+      text-align: center;
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      color: var(--text-color-body-fixed);
+      padding: 0 1rem;
+    }
+
+    .deck-embed {
+      width: 90%;
+      max-width: 600px;
+      height: 450px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      border: 2px solid #72b4d5;
+      background-color: rgba(255, 255, 255, 0.383);
+      position: relative;
+      z-index: 1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-color-footer-fixed);
+      text-align: center;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.4);
+      opacity: 0;
+      animation: sparkle-anim 3.5s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes sparkle-anim {
+      0% { transform: scale(0) translateY(0); opacity: 0; }
+      25% { opacity: 0.5; }
+      50% { transform: scale(1.1) translateY(-8px); opacity: 0.7; }
+      75% { opacity: 0.5; }
+      100% { transform: scale(0) translateY(15px); opacity: 0; }
+    }
+
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      .deck-embed {
+        height: 400px;
+      }
+      .description {
+        font-size: 0.95rem;
+      }
+    }
+     @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+       .deck-embed {
+        height: 350px;
+      }
+      .description {
+        font-size: 0.9rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GitHub Foundations • GitHub4Women</h1>
+  </header>
+
+  <p class="description">
+    Este baralho Anki foi desenvolvido para apoiar as estudantes do programa GitHub4Women na preparação para a certificação GitHub Foundations. <br>
+    Bons Estudos!
+  </p>
+
+  <div class="deck-embed">
+    <iframe src="https://ankipro.net/embed-deck-preview/v2_sYtMB6owSJ_3239535?render_title=true&render_author=true&render_number_of_cards=true"></iframe>
+  </div>
+
+  <footer>
+    Compartilhe com outras mulheres da tecnologia 🌷
+  </footer>
+
+  <script>
+    // Sparkles
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+
+      const bodyWidth = document.body.scrollWidth;
+      const bodyHeight = document.body.scrollHeight;
+
+      sparkle.style.top = Math.random() * bodyHeight + 'px';
+      sparkle.style.left = Math.random() * bodyWidth + 'px';
+      sparkle.style.animationDelay = (Math.random() * 3.5) + 's';
+      sparkle.style.animationDuration = (2.5 + Math.random() * 2.5) + 's';
+      document.body.appendChild(sparkle);
+
+      const timeToRemove = (parseFloat(sparkle.style.animationDelay.replace('s','')) +
+                            parseFloat(sparkle.style.animationDuration.replace('s',''))) * 1000;
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, timeToRemove);
+    }
+
+    for(let i = 0; i < 40; i++) {
+        createSparkle();
+    }
+    setInterval(createSparkle, 800);
+
+  </script>
+
+</body>
+</html>
